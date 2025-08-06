@@ -1,0 +1,15 @@
+.title {
+    color: var(--text-color-body);
+    font-family: var(--font-family-global);
+    text-align: center;
+    padding: 50px;
+
+    position: relative;
+    z-index: 10;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+.emptyBlock {
+    height: 100vh;
+}

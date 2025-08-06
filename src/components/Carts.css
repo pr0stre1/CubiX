@@ -1,0 +1,143 @@
+.sectionBlock {
+    padding: 25vh 0;
+}
+
+.carts {
+    /*height: 100vh;*/
+    width: calc(100vw - .5rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    /*margin-bottom: 50vh;*/
+
+    z-index: 10;
+    pointer-events: none;
+}
+
+.carts .cart {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    /*height: 50vh;*/
+    /*width: 30vw;*/
+    height: 300px;
+    width: 300px;
+
+    /*padding: 1rem;*/
+    margin: 1rem;
+    background-color: var(--body-color-lighter);
+    opacity: .5;
+
+    border: 1px solid var(--body-color-lighter);
+    transition-duration: 1s;
+    transition-delay: 1s;
+    cursor: pointer;
+    position: relative;
+
+    grid-template-rows: 3fr 1fr;
+    pointer-events: auto;
+}
+
+.carts .cart .details {
+    /*height: 100%;*/
+    /*width: 100%;*/
+
+    /*display: grid;*/
+    /*justify-content: center;*/
+    /*align-content: center;*/
+
+    /*background-color: var(--body-color-lighter);*/
+    color: var(--text-color-body);
+    font-family: var(--font-family-global);
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: end;
+    padding: .5rem;
+    /*opacity: .5;*/
+}
+
+.carts .cart .cover {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    color: var(--text-color-body);
+    font-family: var(--font-family-global);
+    padding: 1rem;
+}
+
+.carts .cart .cover img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+}
+
+.carts .cart .details .bigTitle {
+    /*opacity: .5;*/
+    text-align: center;
+    font-family: var(--font-family-global);
+}
+
+.carts .cart .details .description {
+    opacity: 0.5;
+    text-align: center;
+    font-family: var(--font-family-global);
+}
+
+.carts .cart .details .social {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+}
+
+.carts .cart .details .social a {
+    opacity: .5;
+    color: var(--text-color-body);
+}
+
+.carts .cart .details .social a:hover {
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .carts .cart:hover {
+        opacity: 1;
+
+        border: 1px solid var(--body-color-light);
+        transition-delay: 0s;
+        transition-duration: .5s;
+        scale: 1.1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carts .cart:active {
+        opacity: 1;
+
+        border: 1px solid var(--body-color-light);
+        transition-delay: 0s;
+        transition-duration: .5s;
+        scale: 1.1;
+    }
+
+    .carts .cart {
+        user-select: none;
+        height: 200px;
+        width: 200px;
+    }
+
+    #targets .carts .cart .description {
+        display: none;
+    }
+
+    .carts {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

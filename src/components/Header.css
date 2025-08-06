@@ -1,0 +1,112 @@
+.header a {
+    text-transform: uppercase;
+    font-family: var(--font-family-global);
+    margin: .5rem;
+}
+
+.header {
+    /*top: calc(-100%);*/
+    top: 0;
+    position: fixed;
+    width: calc(100vw - 0.5rem);
+    z-index: 50;
+    /*z-index: -1;*/
+    /* border-radius: 1rem 1rem 0 0; */
+    /*transition: .5s;*/
+    /*overflow: hidden;*/
+    display: grid;
+    justify-items: center;
+    padding: 25px;
+    /*height: 50px;*/
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.header nav {
+    display: grid;
+    justify-content: center;
+    /*grid-template-columns: repeat(auto-fit, 100px);*/
+    grid-template-columns: auto 4fr auto;
+    grid-auto-flow: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.25rem;
+    /*background-color: var(--body-color);*/
+    /*box-shadow: var(--box-shadow-global);*/
+    border: 1px solid var(--body-color-lighter);
+    /*background-color: rgba(var(--body-color-lighter-rgb), 0.5);*/
+    background-color: var(--body-color-lighter);
+    /*opacity: .5;*/
+    /*border-radius: 1rem;*/
+    /*overflow-y: hidden;*/
+    /*overflow-x: scroll;*/
+    /*scrollbar-width: none;*/
+
+    /*z-index: 50;*/
+    user-select: none;
+    pointer-events: auto;
+}
+
+/*.header nav:hover {*/
+/*    background-color: rgba(var(--body-color-lighter-rgb), 1);*/
+/*}*/
+
+.header nav ul {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    white-space: nowrap;
+
+    margin: 0 .5rem;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.header nav ul li {
+    /*margin: .75rem;*/
+    list-style-type: none;
+}
+
+.header nav ul li a {
+    color: var(--text-color-body);
+    text-shadow: var(--box-shadow-global);
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header nav ul li a svg {
+    margin: .5rem;
+}
+
+.header nav ul li a:hover {
+    opacity: 1;
+}
+
+.header nav ul li i {
+    font-size: var(--font-size-medium);
+}
+
+.header nav ul li button {
+    border: none;
+    background: none;
+}
+
+.header nav .menu {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .header nav {
+        width: 85vw;
+        grid-template-columns: 0 4fr auto;
+    }
+
+    .header nav ul {
+        justify-content: start;
+        padding-left: 0;
+    }
+}

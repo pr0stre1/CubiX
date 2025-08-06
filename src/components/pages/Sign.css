@@ -1,0 +1,59 @@
+.sign-form {
+    height: 100svh;
+    width: 100vw;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /*width: calc(100vw - .5rem);*/
+    pointer-events: none;
+}
+
+.btn {
+    background-color: var(--body-color);
+    color: var(--text-color-body);
+    border-radius: unset;
+    border-color: unset;
+    opacity: .5;
+}
+
+.btn:hover {
+    border-color: unset;
+    color: var(--text-color-body);
+    opacity: 1;
+}
+
+.form-control {
+    border-radius: unset;
+    background-color: var(--body-color-lighter);
+    color: var(--text-color-body);
+    opacity: .5;
+}
+
+.form-control::placeholder {
+    color: var(--text-color-body);
+}
+
+.form-control:focus {
+    border-color: var(--body-color-darker);
+    box-shadow: 0 0 0 0.2rem var(--body-color-lighter);
+    background-color: var(--body-color-lighter);
+    color: var(--text-color-body);
+    opacity: 1;
+}
+
+.sign-form form a {
+    color: var(--text-color-body);
+    opacity: .5;
+}
+
+.sign-form form a:hover {
+    opacity: 1;
+}
+
+.sign-form form {
+    pointer-events: auto;
+    z-index: 50;
+    padding: 1rem;
+    opacity: 0;
+}

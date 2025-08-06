@@ -1,0 +1,58 @@
+.blocks {
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 10%);
+    grid-template-rows: repeat(auto-fill, 20%);
+
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    user-select: none;
+}
+
+.blocks div {
+    border: 1px solid var(--body-color-lighter);
+    transition-duration: 1s;
+    transition-delay: 1s;
+    /*opacity: 1;*/
+    /*opacity: 0;*/
+    scale: 0;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .blocks div:hover {
+        border: 1px solid var(--body-color-light);
+        /*background-color: var(--body-color-lighter);*/
+        transition-delay: 0s;
+        transition-duration: .5s;
+        /*opacity: 1;*/
+        scale: .9 !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .blocks {
+        grid-template-columns: repeat(auto-fill, 20%);
+        /*grid-template-rows: repeat(auto-fill, 20%);*/
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blocks {
+        grid-template-columns: repeat(auto-fill, 25%);
+        /*grid-template-rows: repeat(auto-fill, 20%);*/
+    }
+
+    .blocks div:active {
+        border: 1px solid var(--body-color-light);
+        /*background-color: var(--body-color-lighter);*/
+        transition-delay: 0s;
+        transition-duration: .5s;
+        /*opacity: 1;*/
+        scale: .9 !important;
+    }
+}
